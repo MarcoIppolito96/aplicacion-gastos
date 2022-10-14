@@ -97,7 +97,7 @@ async function addRowTransactionTable(transactions){
     cell1.innerHTML = transactions.id;
     cell2.innerHTML = transactions.type;
     cell3.innerHTML = transactions.description;
-    cell4.innerHTML = transactions.price;    
+    cell4.innerHTML = '$  ' + transactions.price;    
     cell5.innerHTML = transactions.category;
     cell6.innerHTML = transactions.date.slice(0,10);
     cell7.innerHTML = botonEliminarconTexto;
