@@ -99,7 +99,7 @@ async function addRowTransactionTable(transactions){
     cell3.innerHTML = transactions.description;
     cell4.innerHTML = transactions.price;    
     cell5.innerHTML = transactions.category;
-    cell6.innerHTML = transactions.date;
+    cell6.innerHTML = transactions.date.slice(0,10);
     cell7.innerHTML = botonEliminarconTexto;
 
     if(transactions.type == 'Egreso'){
@@ -116,7 +116,6 @@ async function drawTable(transactions){
     const tbodyTable = document.getElementById("tbodyTable").innerHTML= "";
     transactions.forEach(transaction => {
         addRowTransactionTable(transaction);
-        console.log(transaction)
     });
 }
 
