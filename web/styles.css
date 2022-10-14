@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+}
+
+#formulario{
+    text-align: center;
+}
+
+.claseFormulario{
+    margin-bottom: 10px;
+}
+
+#botonDeEnvio{
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.formField table{
+    margin: 0 auto;
+}
+
+th{
+    padding: 5px;
+}
+
+td{
+    border: solid 1px #ccc;
+    padding: 5px;
+}
+
+.formField label{
+    font-size: 20px
+}
+

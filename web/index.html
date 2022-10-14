@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion para Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+        <h1>Aplicacion Para Gastos</h1>
+        <div class="row">
+            <div class="col l5 offset-l1 s12" >
+        <form id="formulario" name="formulario">
+            <div class="formField">
+                <p>
+            <span>Transaccion</span>
+
+                <label>
+                  <input required class="with-gap" id="ingreso" name="transactionType" type="radio" checked value="Ingreso" />
+                  <span>Ingreso</span>
+                </label>
+
+                <label>
+                  <input required class="with-gap" id="egreso" name="transactionType" type="radio" checked value="Egreso" />
+                  <span>Egreso</span>
+                </label>
+              </p>
+        </div>
+       <div class="input-field col s6">
+        <label for="transactionDescription">Descripcion</label> 
+        <input class="validate" id="transactionDescription" name="transactionDescription" type="text" required>
+        
+       </div> 
+       <div class="input-field col s6"> 
+        <label for="transactionAmount">Monto</label> 
+        <input class="validate" min="0" id="transactionPrice" name="transactionPrice" type="number" required>
+
+       </div>
+
+       <div class="formField">
+        <label class="categoria" for="transactionCategory">Categoría</label>
+        
+        <select class="browser-default" id="transactionCategory" name="transactionCategory" type="text">
+            <option>Alquiler</option>
+            <option>Comida</option>
+            <option>Diversion</option>
+            <option>Servicio</option>
+        </select>
+
+        </div>
+
+        <div>
+        <input type="date" value=""
+        min="2020-01-01" max="2030-12-31" name="transactionDate" id="transactionDate">    
+
+
+        </div>
+        <input type="submit" id="botonDeEnvio" value="Añadir" >
+
+        </form>
+    </div>
+            <div class="col l5 s12">
+        <div class="formField">
+            <table id="transactionTable">
+                <thead>
+            <tr>      
+                <th>Id</th>             
+                <th>Tipo</th>
+                <th>Descripcion</th>
+                <th>Monto</th>
+                <th>Categoria</th>
+                <th>Fecha</th>
+                <th>Eliminar</th>
+            </tr>
+            </thead>
+            <tbody id="tbodyTable"></tbody>
+            </table>
+             </div>
+
+            </div>
+        </div>
+    </div>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+             <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
